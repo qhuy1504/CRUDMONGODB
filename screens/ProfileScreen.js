@@ -9,7 +9,7 @@ const ProfileScreen = ({ route, navigation }) => {
 
     const handleChangePassword = async () => {
         try {
-            const response = await axios.put('http://192.168.2.144:3000/reset-password', {
+            const response = await axios.put('http://172.16.32.211:3000/reset-password', {
                 username: user.username,
                 password: newPassword,
             });
@@ -36,7 +36,7 @@ const ProfileScreen = ({ route, navigation }) => {
     };
     const handleDeleteAccount = async () => {
         try {
-            const response = await axios.delete('http://192.168.2.144:3000/delete-account', {
+            const response = await axios.delete('http://172.16.32.211:3000/delete-account', {
                 data: { username: user.username }
             });
 

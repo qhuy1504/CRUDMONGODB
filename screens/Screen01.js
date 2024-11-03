@@ -70,7 +70,7 @@ const Screen01 = ({ route, navigation }) => {
                     
                         <View style={styles.gioiThieu}>
                             <TouchableOpacity onPress={ ()=>navigation.navigate('Profile', {user})}>
-                            <Image source={user && user.avatar ? { uri: `http://192.168.2.144:3000/uploads/${user.avatar}`  } : require('../img/personicon.png')} style={styles.imgProfile} />
+                            <Image source={user && user.avatar ? { uri: `http://172.16.32.211:3000/uploads/${user.avatar}`  } : require('../img/personicon.png')} style={styles.imgProfile} />
                             </TouchableOpacity>
                         <View style={styles.title}>
                                 <Text style={styles.title1}>Welcome !</Text>

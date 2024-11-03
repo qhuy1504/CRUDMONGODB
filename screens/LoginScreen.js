@@ -11,12 +11,12 @@ const LoginScreen = ({ navigation }) => {
     const handleLogin = async () => {
         // Thêm logic đăng nhập ở đây
         try {
-            const response = await axios.post('http://192.168.2.144:3000/login', {
+            const response = await axios.post('http://172.16.32.211:3000/login', {
                 username,
                 password
             });
         
-            console.log('Đăng nhập:', username, password);
+            console.log('Đăng nhập:', response);
             //Ktra phản hồi
             if (response.status === 200 && response.data.success) {
                 navigation.navigate('Screen01', { user: response.data.user});
